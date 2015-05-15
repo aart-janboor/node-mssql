@@ -137,7 +137,7 @@ valueCorrection = (value, metadata) ->
 		date = "0" +value.getDate().toString()
 		date = date.substring(date.length-2)
 		month = "0" + value.getMonth().toString()
-		month.substring(month.length-2)
+		month = month.substring(month.length-2)
 		year = value.getFullYear()
 		return date+"-"+month+"-"+year
 
