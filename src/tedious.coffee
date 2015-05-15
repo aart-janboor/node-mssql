@@ -133,6 +133,13 @@ createColumns = (metadata) ->
 ###
 
 valueCorrection = (value, metadata) ->
+	if metadata.type is "DateN"
+		date = "0" +value.getDate().toString()
+		date = date.substring(date.length-2)
+		month = "0" + value.getMonth().toString()
+		month.substring(month.length-2)
+		year = value.getFullYear()
+
 	if metadata.type is tds.TYPES.UDT and value?
 		if UDT[metadata.udtInfo.typeName]
 			UDT[metadata.udtInfo.typeName] value
