@@ -133,7 +133,7 @@ createColumns = (metadata) ->
 ###
 
 valueCorrection = (value, metadata) ->
-	if metadata.type is "DateN"
+	if metadata.type.name is "DateN"
 		date = "0" +value.getDate().toString()
 		date = date.substring(date.length-2)
 		month = "0" + value.getMonth().toString()
