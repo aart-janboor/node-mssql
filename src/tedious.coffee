@@ -139,6 +139,7 @@ valueCorrection = (value, metadata) ->
 		month = "0" + value.getMonth().toString()
 		month.substring(month.length-2)
 		year = value.getFullYear()
+		return date+"-"+month+"-"+year
 
 	if metadata.type is tds.TYPES.UDT and value?
 		if UDT[metadata.udtInfo.typeName]
